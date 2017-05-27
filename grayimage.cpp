@@ -97,15 +97,15 @@ tResult image::OnPinEvent(IPin *psource, tInt eventCore, tInt param1, tInt param
 			{
 			case(CV_8UC3):
 				cv::cvtColor(outputImage, outputImage, CV_BGR2GRAY);
-				cv::threshold(outputImage, outputImage, 128, 255, 1);
+				//cv::threshold(outputImage, outputImage, 128, 255, 1);
 				break;
 			case(CV_16UC1):
 				outputImage = outputImage / 255;
 				outputImage.convertTo(outputImage, CV_8UC1);
-				cv::threshold(outputImage, outputImage, 128, 255, 1);
+				//cv::threshold(outputImage, outputImage, 128, 255, 1);
 				break;
 			case(CV_8UC1):
-				cv::threshold(outputImage, outputImage, 128, 255, 1);
+				//cv::threshold(outputImage, outputImage, 128, 255, 1);
 				break;
 			}
 			TransmitOutput(mediaSample->GetTime());
